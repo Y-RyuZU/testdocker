@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  python: 
+    build:
+      dockerfile: "./Dockerfile"
+      context: ./python
+  database:
+    image: mariadb
+    environment:
+      - MARIADB_ROOT_PASSWORD=root
+      - MARIADB_DATABASE=database
