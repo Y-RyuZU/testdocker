@@ -36,6 +36,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: .
+          context: ./python
           push: true
-          tags: ghcr.io/${{ steps.string.outputs.lowercase }}:latest
+          tags: ghcr.io/${{ steps.string.outputs.lowercase }}-python:latest
